@@ -1,0 +1,63 @@
+---
+import Base from '../../layouts/base.astro';
+import Header from '../../components/header.astro';
+import Render from '../../components/render.astro';
+
+const basic = ['input-01', 'input-02', 'input-03', 'input-04', 'input-05'];
+
+const prefix = ['input-06', 'input-07', 'input-08', 'input-09', 'input-10', 'input-11'];
+---
+
+<Base title="Home" description="Bleu home page">
+  <Header />
+  <div class="w-full max-w-7xl mx-auto px-4 pt-6 pb-12 flex flex-col items-start space-y-6">
+    <div class="relative">
+      <div class="absolute -left-6 top-1/2 -translate-y-1/2 h-8 w-1 bg-[#1C7DC8]"></div>
+      <h1 class="font-bold">UI Kit / Inputs</h1>
+    </div>
+    <p class="max-w-xl">
+      A small collection of composable inputs built with React and TailwindCSS. Copy-paste them
+      straight into your codebase, ready to be edited.
+    </p>
+    <div class="w-full py-4">
+      <hr class="w-full h-px bg-slate-200" />
+    </div>
+    <a class="font-semibold" href="#01">01 / Basic inputs</a>
+    <ul
+      class="py-6 w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-12 gap-12 lg:gap-x-16"
+    >
+      {
+        basic.map((input) => (
+          <li>
+            <Render name={input} folder="inputs" />
+          </li>
+        ))
+      }
+    </ul>
+    <div class="w-full py-4">
+      <hr class="w-full h-px bg-slate-200" />
+    </div>
+    <a class="font-semibold" href="#02">02 / Prefix & suffix inputs</a>
+    <ul
+      class="py-6 w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-12 gap-12 lg:gap-x-16"
+    >
+      {
+        prefix.map((input) => (
+          <li>
+            <Render name={input} folder="inputs" />
+          </li>
+        ))
+      }
+    </ul>
+    <a
+      href="https://x.com/herbievine"
+      target="_blank"
+      class="w-full px-6 py-3 border border-slate-300 hover:border-slate-400 transition-colors duration-200"
+    >
+      <span>
+        Want to see more components? Reach out to me on X! I'd love to grow this collection to cater
+        to all use-cases.
+      </span>
+    </a>
+  </div>
+</Base>

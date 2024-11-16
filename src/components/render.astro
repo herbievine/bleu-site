@@ -1,0 +1,30 @@
+---
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import { lazy } from 'react';
+import { Copy } from './copy';
+
+type Props = {
+  name: string;
+  folder: 'inputs';
+};
+
+const componentPath = path.resolve(
+  `./src/components/kit/${Astro.props.folder}/${Astro.props.name}.tsx`
+);
+
+const source = await fs.readFile(componentPath, 'utf8');
+
+const Component = lazy(() => import(`./kit/${Astro.props.folder}/${Astro.props.name}.tsx`));
+---
+
+<div class="w-full h-full flex flex-col justify-start items-center space-y-4">
+  <div class="w-full flex justify-between">
+    <span class="text-sm font-semibold">input / {Astro.props.name.slice(-2)}</span>
+    <Copy client:only="react" source={source} />
+  </div>
+  <hr class="w-full h-px my-12 bg-slate-200" />
+  <div class="w-full">
+    <Component />
+  </div>
+</div>
