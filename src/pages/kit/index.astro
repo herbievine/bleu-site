@@ -1,16 +1,18 @@
 ---
-import Base from '../../layouts/base.astro'
-import Header from '../../components/header.astro'
+import Base from '../../layouts/base.astro';
+import Header from '../../components/header.astro';
 ---
 
-<Base title='Home' description='Bleu home page'>
+<Base title="Home" description="Bleu home page" image="/static/ui-kit.png">
   <Header />
   <div class="w-full max-w-7xl mx-auto px-4 py-6 flex flex-col items-start space-y-6">
     <div class="relative">
-      <div class="absolute -left-6 top-1/2 -translate-y-1/2 h-8 w-1 bg-[#1C7DC8]" />
+      <div class="absolute -left-6 top-1/2 -translate-y-1/2 h-8 w-1 bg-[#1C7DC8]"></div>
       <h1 class="font-bold">UI Kit</h1>
     </div>
-    <p class="max-w-lg">Open-source, accessible and extensible components to copy-paste into your project.</p>
+    <p class="max-w-lg">
+      Open-source, accessible and extensible components to copy-paste into your project.
+    </p>
     <ul>
       <li class="font-medium">
         * <a href="/kit/inputs" class="text-[#1C7DC8] underline">Inputs</a>
