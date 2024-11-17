@@ -1,20 +1,48 @@
 ---
-
+let bg: 'white' | 'black' = 'white';
 ---
 
-<header class="h-16 flex justify-center">
-  <div class="z-50 h-16 w-full fixed top-0 bg-white backdrop-blur-sm bg-opacity-60">
+<header id="nav" class="h-16 flex justify-center">
+  <div class="z-50 h-16 w-full fixed top-0 backdrop-blur-sm bg-opacity-60">
     <div
       class="w-full max-w-7xl h-full mx-auto px-6 py-4 flex items-center justify-start space-x-4 md:space-x-8"
     >
       <a href="/" class="w-6 h-6">
         <img src="/logo.svg" alt="Bleu Agency" class="h-6 w-6" />
       </a>
-      <nav class="flex items-center divide-x divide-slate-200">
-        <!-- <a href="/services" class="px-4 font-semibold hover:underline">Services</a> -->
-        <!-- <a href="/pricing" class="px-4 font-semibold hover:underline">Pricing</a> -->
-        <a href="/kit" class="px-4 font-semibold hover:underline">UI Kit (new)</a>
+      <nav class="flex items-center divide-x divide-slate-300 dark:divide-slate-700">
+        <a
+          href="/#benefits"
+          class="px-4 font-semibold hover:underline text-slate-800 dark:text-slate-300">Benefits</a
+        >
+        <a
+          href="/#pricing"
+          class="px-4 font-semibold hover:underline text-slate-800 dark:text-slate-300">Pricing</a
+        >
+        <!-- <a href="/kit" class="px-4 font-semibold hover:underline text-slate-800 dark:text-slate-300"
+          >UI Kit (new)</a
+        > -->
       </nav>
     </div>
   </div>
 </header>
+
+<script>
+  const nav = document.getElementById('nav');
+
+  document.addEventListener('scroll', (event) => {
+    const y = window.scrollY;
+    const width = window.innerWidth;
+
+    if (width > 768 && y > 705 && y < 1620) {
+      nav.classList.add('dark');
+      nav.classList.remove('light');
+    } else if (width <= 768 && y > 476 && y < 1264) {
+      nav.classList.add('dark');
+      nav.classList.remove('light');
+    } else {
+      nav.classList.add('light');
+      nav.classList.remove('dark');
+    }
+  });
+</script>

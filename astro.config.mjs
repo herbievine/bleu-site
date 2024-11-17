@@ -12,8 +12,8 @@ export default defineConfig({
   integrations: [react(), tailwind()],
   adapter: node({
     mode: 'standalone'
-  }),
-  redirects: {
-    '/': '/kit'
-  }
+  })
+  // redirects: {
+  //   '/': '/kit'
+  // }
 });
