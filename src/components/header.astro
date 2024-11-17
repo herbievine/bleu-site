@@ -1,5 +1,5 @@
 ---
-let bg: 'white' | 'black' = 'white';
+
 ---
 
 <header id="nav" class="h-16 flex justify-center">
@@ -30,7 +30,11 @@ let bg: 'white' | 'black' = 'white';
 <script>
   const nav = document.getElementById('nav');
 
-  document.addEventListener('scroll', (event) => {
+  if (!nav) {
+    return;
+  }
+
+  document.addEventListener('scroll', () => {
     const y = window.scrollY;
     const width = window.innerWidth;
 
