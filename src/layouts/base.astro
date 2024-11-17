@@ -9,7 +9,12 @@ type Props = {
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-const { title, description, image } = Astro.props;
+let { title, description, image } = Astro.props;
+
+title = `${title} | Bleu`;
+description ||=
+  'Bleu is a modern web development agency specializing in React and TailwindCSS. We offer seamless, subscription-based services for SaaS startups and businesses seeking scalable and beautiful UI solutions. Simplify your frontend today.';
+image ||= '/static/bleu.png';
 ---
 
 <!doctype html>
@@ -38,16 +43,16 @@ const { title, description, image } = Astro.props;
     <link rel="canonical" href={canonicalURL} />
 
     <!-- Primary Meta Tags -->
-    <title>Bleu | {title}</title>
-    <meta name="title" content={`Bleu | ${title}`} />
-    <meta name="description" content={description || 'Web Development Agency'} />
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content={Astro.url} />
-    <meta property="og:title" content={`Bleu | ${title}`} />
-    <meta property="og:description" content={description || 'Web Development Agency'} />
-    <meta property="og:image" content={new URL(image || '/static/bleu.png', Astro.url)} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL(image, Astro.url)} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="Bleu" />
@@ -55,9 +60,9 @@ const { title, description, image } = Astro.props;
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content={Astro.url} />
-    <meta property="twitter:title" content={`Bleu | ${title}`} />
-    <meta property="twitter:description" content={description || 'Web Development Agency'} />
-    <meta property="twitter:image" content={new URL(image || '/static/bleu.png', Astro.url)} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={new URL(image, Astro.url)} />
     <meta property="twitter:image:width" content="1200" />
     <meta property="twitter:image:height" content="630" />
     <meta property="twitter:image:alt" content="Bleu" />
