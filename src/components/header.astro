@@ -38,6 +38,10 @@
   }
 
   document.addEventListener('scroll', () => {
+    if (!section) {
+      return;
+    }
+
     const y = window.scrollY;
     const offset = 32;
 
