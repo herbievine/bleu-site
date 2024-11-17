@@ -1,10 +1,22 @@
-<svg width="1000" height="1000" viewBox="0 0 1000 1000" fill="none"
-	xmlns="http://www.w3.org/2000/svg">
-	<path d="M0 500C0 223.858 223.858 0 500 0C776.142 0 1000 223.858 1000 500C1000 776.142 776.142 1000 500 1000C223.858 1000 0 776.142 0 500Z" fill="url(#paint0_linear_11_2)"/>
-	<defs>
-		<linearGradient id="paint0_linear_11_2" x1="500" y1="0" x2="500" y2="1000" gradientUnits="userSpaceOnUse">
-			<stop stop-color="#41BADF"/>
-			<stop offset="1" stop-color="#1C7DC8"/>
-		</linearGradient>
-	</defs>
+<svg width="1000" height="1000" viewBox="0 0 1000 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_26_2)">
+<path d="M0 500C0 223.858 223.858 0 500 0V0C776.142 0 1000 223.858 1000 500V500C1000 776.142 776.142 1000 500 1000V1000C223.858 1000 0 776.142 0 500V500Z" fill="url(#paint0_linear_26_2)"/>
+<g filter="url(#filter0_f_26_2)">
+<ellipse cx="913.311" cy="55.4999" rx="187.183" ry="709.721" transform="rotate(-19.4958 913.311 55.4999)" fill="white"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_f_26_2" x="-182.067" y="-1416.49" width="2190.76" height="2943.97" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="400" result="effect1_foregroundBlur_26_2"/>
+</filter>
+<linearGradient id="paint0_linear_26_2" x1="500" y1="0" x2="500" y2="1000" gradientUnits="userSpaceOnUse">
+<stop stop-color="#1E293B"/>
+<stop offset="1" stop-color="#020617"/>
+</linearGradient>
+<clipPath id="clip0_26_2">
+<path d="M0 500C0 223.858 223.858 0 500 0V0C776.142 0 1000 223.858 1000 500V500C1000 776.142 776.142 1000 500 1000V1000C223.858 1000 0 776.142 0 500V500Z" fill="white"/>
+</clipPath>
+</defs>
 </svg>
