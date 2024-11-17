@@ -1,10 +1,30 @@
 ---
-
+const year = new Date().getFullYear();
 ---
 
-<footer class="py-20 flex justify-center">
-  <span>
-    Made by <a href="https://herbievine.com?ref=bleu" target="_blank" class="underline">Herbie</a>,
-    in Paris
-  </span>
+<footer class="w-full bg-slate-950 py-12 flex flex-col justify-between items-center space-y-12">
+  <div class="w-full max-w-7xl mx-auto px-6 flex justify-end items-center">
+    <ul class="flex flex-col items-end space-y-2 font-semibold">
+      <li class="text-slate-200 hover:underline">
+        <a href="/">Home</a>
+      </li>
+      <li class="text-slate-200 hover:underline">
+        <a href="/">Case studies</a>
+      </li>
+      <li class="text-slate-200 hover:underline">
+        <a href="/kit">UI Kit (new)</a>
+      </li>
+    </ul>
+  </div>
+  <hr class="h-px w-full max-w-7xl mx-auto px-6 border-slate-700" />
+  <div class="w-full max-w-7xl mx-auto px-6 flex justify-between items-center">
+    <span class="text-slate-200 font-bold">bleu.dev</span>
+    <ul class="flex items-center space-x-4">
+      <li>
+        <a href="https://x.com/herbievine" target="_blank">
+          <img src="/svgs/x.svg" alt="X/Twitter icon" class="w-5 h-5" />
+        </a>
+      </li>
+    </ul>
+  </div>
 </footer>

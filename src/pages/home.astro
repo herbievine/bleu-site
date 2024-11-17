@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/base.astro';
 // import Header from '../components/header.astro';
+import Footer from '../components/footer.astro';
 ---
 
 <Base title="Modern Web Development Agency">
@@ -10,8 +11,8 @@ import Base from '../layouts/base.astro';
       <h1 class="font-bold text-3xl md:text-5xl max-w-2xl text-center">
         The web agency for modern brands
       </h1>
-      <p class="text-slate-600 text-center font-medium">
-        We specialize in crafting sleek, scalable<br /> frontend solutions using React.
+      <p class="text-slate-600 text-center font-medium max-w-md">
+        We specialize in crafting sleek, scalable frontend solutions using React.
       </p>
     </section>
     <section class="w-full px-6 py-40 md:py-60 flex flex-col items-center space-y-6 bg-slate-950">
@@ -23,42 +24,46 @@ import Base from '../layouts/base.astro';
         scaling an established company, we’re here to help you and your team grow.
       </p>
       <ul
-        class="pt-12 w-full max-w-5xl grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-x-20 md:gap-y-12"
+        class="pt-12 w-full max-w-5xl grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-x-20 md:gap-y-12"
       >
-        <li class="flex flex-col space-y-2">
-          <img src="/svgs/zap.svg" alt="Lightning icon" class="w-8 h-8" />
-          <span class="text-slate-200">Rapide delivery. Generally between 5-8 days.</span>
+        <li class="flex flex-col space-y-2 items-center">
+          <img src="/svgs/zap.svg" alt="Lightning icon" class="w-6 md:w-8 h-6 md:h-8" />
+          <span class="text-slate-200 text-center"
+            >Rapide delivery. Generally between 5-8 days.</span
+          >
         </li>
-        <li class="flex flex-col space-y-2">
-          <img src="/svgs/boxes.svg" alt="Solution icon" class="w-8 h-8" />
-          <span class="text-slate-200">Tailored solution for your business needs.</span>
+        <li class="flex flex-col space-y-2 items-center">
+          <img src="/svgs/boxes.svg" alt="Solution icon" class="w-6 md:w-8 h-6 md:h-8" />
+          <span class="text-slate-200 text-center">Tailored solution for your business needs.</span>
         </li>
-        <li class="flex flex-col space-y-2">
-          <img src="/svgs/euro.svg" alt="Euro icon" class="w-8 h-8" />
-          <span class="text-slate-200">Fixed rate. No end-of-month suprises.</span>
+        <li class="flex flex-col space-y-2 items-center">
+          <img src="/svgs/euro.svg" alt="Euro icon" class="w-6 md:w-8 h-6 md:h-8" />
+          <span class="text-slate-200 text-center">Fixed rate. No end-of-month suprises.</span>
         </li>
-        <li class="flex flex-col space-y-2">
-          <img src="/svgs/star.svg" alt="Star icon" class="w-8 h-8" />
-          <span class="text-slate-200">Premium quality assured.</span>
+        <li class="flex flex-col space-y-2 items-center">
+          <img src="/svgs/star.svg" alt="Star icon" class="w-6 md:w-8 h-6 md:h-8" />
+          <span class="text-slate-200 text-center">Premium quality assured.</span>
         </li>
-        <li class="flex flex-col space-y-2">
-          <img src="/svgs/shield.svg" alt="Shield icon" class="w-8 h-8" />
-          <span class="text-slate-200">7-day money back guaranteed, no questions asked.</span>
+        <li class="flex flex-col space-y-2 items-center">
+          <img src="/svgs/shield.svg" alt="Shield icon" class="w-6 md:w-8 h-6 md:h-8" />
+          <span class="text-slate-200 text-center"
+            >7-day money back guaranteed, no questions asked.</span
+          >
         </li>
-        <li class="flex flex-col space-y-2">
-          <img src="/svgs/handshake.svg" alt="Handshake icon" class="w-8 h-8" />
-          <span class="text-slate-200">Designed to grow with your business.</span>
+        <li class="flex flex-col space-y-2 items-center">
+          <img src="/svgs/handshake.svg" alt="Handshake icon" class="w-6 md:w-8 h-6 md:h-8" />
+          <span class="text-slate-200 text-center">Designed to grow with your business.</span>
         </li>
       </ul>
     </section>
     <section
       class="w-full max-w-7xl mx-auto px-6 py-40 md:py-60 flex flex-col items-center space-y-6"
     >
-      <h2 class="font-bold text-3xl md:text-5xl text-center">Pricing made simple again</h2>
-      <p class="text-slate-700 text-center font-medium max-w-lg md:max-w-xl">
+      <h2 class="font-bold text-3xl md:text-5xl text-center">Pricing</h2>
+      <p class="text-slate-600 text-center font-medium max-w-lg md:max-w-xl">
         Our pricing model is transparent—designed to make things easier for both you and us.
       </p>
-      <div class="pt-12 w-full grid grid-cols-1 lg:grid-cols-3 gap-20">
+      <div class="py-12 w-full grid grid-cols-1 lg:grid-cols-3 gap-20">
         <div class="flex flex-col space-y-6">
           <span class="text-xl font-semibold">One-off consultations</span>
           <span class="font-medium underline">€150/hour</span>
@@ -104,11 +109,7 @@ import Base from '../layouts/base.astro';
             <ul class="flex flex-col space-y-1">
               <li class="flex items-center space-x-2">
                 <img src="/svgs/check.svg" alt="Check icon" class="w-5 h-5" />
-                <span>The code is yours to keep</span>
-              </li>
-              <li class="flex items-center space-x-2">
-                <img src="/svgs/check.svg" alt="Check icon" class="w-5 h-5" />
-                <span>Private slack channel</span>
+                <span>8-10 day turnaround</span>
               </li>
               <li class="flex items-center space-x-2">
                 <img src="/svgs/check.svg" alt="Check icon" class="w-5 h-5" />
@@ -116,11 +117,15 @@ import Base from '../layouts/base.astro';
               </li>
               <li class="flex items-center space-x-2">
                 <img src="/svgs/check.svg" alt="Check icon" class="w-5 h-5" />
-                <span>8-10 day turnaround</span>
+                <span>Unlimited revisions</span>
               </li>
               <li class="flex items-center space-x-2">
                 <img src="/svgs/check.svg" alt="Check icon" class="w-5 h-5" />
-                <span>Unlimited revisions</span>
+                <span>The code is yours to keep</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <img src="/svgs/check.svg" alt="Check icon" class="w-5 h-5" />
+                <span>Private slack channel</span>
               </li>
             </ul>
           </div>
@@ -140,19 +145,7 @@ import Base from '../layouts/base.astro';
             <ul class="flex flex-col space-y-1">
               <li class="flex items-center space-x-2">
                 <img src="/svgs/check.svg" alt="Check icon" class="w-5 h-5" />
-                <span>The code is yours to keep</span>
-              </li>
-              <li class="flex items-center space-x-2">
-                <img src="/svgs/check.svg" alt="Check icon" class="w-5 h-5" />
-                <span>Private slack channel</span>
-              </li>
-              <li class="flex items-center space-x-2">
-                <img src="/svgs/check.svg" alt="Check icon" class="w-5 h-5" />
-                <span>Attend certain meetings</span>
-              </li>
-              <li class="flex items-center space-x-2">
-                <img src="/svgs/check.svg" alt="Check icon" class="w-5 h-5" />
-                <span>In sync with your team</span>
+                <span>+ Everything in Collaboration</span>
               </li>
               <li class="flex items-center space-x-2">
                 <img src="/svgs/check.svg" alt="Check icon" class="w-5 h-5" />
@@ -164,7 +157,11 @@ import Base from '../layouts/base.astro';
               </li>
               <li class="flex items-center space-x-2">
                 <img src="/svgs/check.svg" alt="Check icon" class="w-5 h-5" />
-                <span>Unlimited revisions</span>
+                <span>Attend certain meetings</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <img src="/svgs/check.svg" alt="Check icon" class="w-5 h-5" />
+                <span>In sync with your team</span>
               </li>
             </ul>
           </div>
@@ -176,6 +173,15 @@ import Base from '../layouts/base.astro';
           </a>
         </div>
       </div>
+      <p class="text-slate-600 text-center font-medium max-w-lg md:max-w-xl">
+        Not sure which plan fits your needs best? <a
+          href="https://cal.com/herbievine/30min"
+          class="text-[#1C7DC8]/90 hover:text-[#1C7DC8] transition-colors duration-200 font-semibold underline"
+        >
+          Reach out</a
+        > and let's find out what you need.
+      </p>
     </section>
   </div>
+  <Footer />
 </Base>
