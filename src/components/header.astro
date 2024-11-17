@@ -30,11 +30,11 @@
 <script>
   const nav = document.getElementById('nav');
 
-  if (!nav) {
-    return;
-  }
-
   document.addEventListener('scroll', () => {
+    if (!nav) {
+      return;
+    }
+
     const y = window.scrollY;
     const width = window.innerWidth;
 
