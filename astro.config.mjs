@@ -6,7 +6,7 @@ import node from '@astrojs/node';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://bleu.dev',
+  site: 'https://poivre.dev',
   trailingSlash: 'never',
   output: 'server',
   integrations: [react(), tailwind()],

@@ -11,10 +11,10 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 let { title, description, image } = Astro.props;
 
-title = `${title} | Bleu`;
+title = `${title} | Poivre`;
 description ||=
-  'Bleu is a modern web development agency specializing in React and TailwindCSS. We offer seamless, subscription-based services for SaaS startups and businesses seeking scalable and beautiful UI solutions. Simplify your frontend today.';
-image ||= '/static/bleu.png';
+  'Poivre is a modern web development agency specializing in React and TailwindCSS. We offer seamless, subscription-based services for SaaS startups and businesses seeking scalable and beautiful UI solutions. Simplify your frontend today.';
+image ||= '/static/media.png';
 ---
 
 <!doctype html>
@@ -55,7 +55,7 @@ image ||= '/static/bleu.png';
     <meta property="og:image" content={new URL(image, Astro.url)} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Bleu" />
+    <meta property="og:image:alt" content="Poivre" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
@@ -65,7 +65,7 @@ image ||= '/static/bleu.png';
     <meta property="twitter:image" content={new URL(image, Astro.url)} />
     <meta property="twitter:image:width" content="1200" />
     <meta property="twitter:image:height" content="630" />
-    <meta property="twitter:image:alt" content="Bleu" />
+    <meta property="twitter:image:alt" content="Poivre" />
 
     <!-- Robots -->
     <meta name="robots" content="index, follow" />
