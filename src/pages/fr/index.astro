@@ -8,7 +8,11 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<Base title="Modern Web Development Agency">
+<Base
+  title="L'agence web pour les marques modernes"
+  description="Poivre est une agence de développement web moderne, spécialisée en React et TailwindCSS. Nous proposons des services d'abonnement fluides pour les startups SaaS et les entreprises recherchant des solutions d'interface utilisateur évolutives et élégantes. Simplifiez votre frontend dès aujourd'hui."
+  image="/static/media-fr.png"
+>
   <Header />
   <div class="py-6 flex flex-col items-start">
     <section class="w-full px-6 py-40 md:py-60 flex flex-col items-center space-y-6">
