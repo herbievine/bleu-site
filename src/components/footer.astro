@@ -1,18 +1,23 @@
 ---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import { languages } from '../i18n/ui';
 
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <footer class="w-full bg-slate-950 py-12 flex flex-col justify-between items-center space-y-12">
-  <div class="w-full max-w-7xl mx-auto px-6 flex justify-end items-center">
+  <div class="w-full max-w-7xl mx-auto px-6 flex justify-between items-start">
+    <span class="text-slate-200 font-bold">poivre.dev</span>
     <ul class="flex flex-col items-end space-y-2 font-semibold">
       <li class="text-slate-200 hover:underline">
-        <a href="/">Home</a>
+        <a href={`/${lang}`}>{t('nav.home')}</a>
       </li>
       <li class="text-slate-200 hover:underline">
-        <a href="/#benefits">Benefits</a>
+        <a href={`/${lang}#benefits`}>{t('nav.benefits')}</a>
       </li>
       <li class="text-slate-200 hover:underline">
-        <a href="/#pricing">Pricing</a>
+        <a href={`/${lang}#pricing`}>{t('nav.pricing')}</a>
       </li>
       <!-- <li class="text-slate-200 hover:underline">
         <a href="/kit">UI Kit (new)</a>
@@ -21,7 +26,17 @@
   </div>
   <hr class="h-px w-full max-w-7xl mx-auto px-6 border-slate-700" />
   <div class="w-full max-w-7xl mx-auto px-6 flex justify-between items-center">
-    <span class="text-slate-200 font-bold">poivre.dev</span>
+    <ul class="flex space-x-2">
+      {
+        Object.entries(languages).map(([lang]) => (
+          <li>
+            <a href={`/${lang}`} class="text-slate-200 hover:underline">
+              {lang}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
     <ul class="flex items-center space-x-4">
       <li>
         <a href="https://x.com/herbievine" target="_blank">

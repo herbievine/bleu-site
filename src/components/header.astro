@@ -1,5 +1,8 @@
 ---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
 
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <header class="h-16 flex justify-center">
@@ -7,15 +10,19 @@
     <div
       class="w-full max-w-7xl h-full mx-auto px-6 py-4 flex items-center justify-start space-x-4 md:space-x-8"
     >
-      <a href="/" class="w-6 h-6">
+      <a href={`/${lang}`} class="w-6 h-6">
         <img src="/logo.svg" alt="Ppivre logo" class="h-6 w-6" />
       </a>
       <nav class="flex items-center">
-        <a id="link" href="/#benefits" class="px-4 font-semibold hover:underline text-slate-800"
-          >Benefits</a
+        <a
+          id="link"
+          href={`/${lang}#benefits`}
+          class="px-4 font-semibold hover:underline text-slate-800">{t('nav.benefits')}</a
         >
-        <a id="link" href="/#pricing" class="px-4 font-semibold hover:underline text-slate-800"
-          >Pricing</a
+        <a
+          id="link"
+          href={`/${lang}#pricing`}
+          class="px-4 font-semibold hover:underline text-slate-800">{t('nav.pricing')}</a
         >
         <!-- <a href="/kit" class="px-4 font-semibold hover:underline text-slate-800"
           >UI Kit (new)</a
