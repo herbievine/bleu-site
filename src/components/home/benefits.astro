@@ -1,0 +1,61 @@
+---
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<section
+  id="section-dark"
+  class="w-full px-6 py-40 md:py-60 flex flex-col items-center space-y-6 bg-slate-950"
+>
+  <h2
+    id="benefits"
+    class="text-slate-200 font-bold text-3xl md:text-5xl max-w-2xl text-center scroll-mt-40"
+  >
+    <a href="#benefits">{t('home.benefits-title')}</a>
+  </h2>
+  <p class="text-slate-400 text-center font-medium max-w-lg md:max-w-xl">
+    {t('home.benefits-subtitle')}
+  </p>
+  <ul
+    class="pt-12 w-full max-w-5xl grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-x-20 md:gap-y-12"
+  >
+    <li class="flex flex-col space-y-2 items-center">
+      <img src="/svgs/zap.svg" alt="Lightning icon" class="w-6 md:w-8 h-6 md:h-8" />
+      <span class="text-slate-200 text-center">
+        {t('home.benefits-delivery')}
+      </span>
+    </li>
+    <li class="flex flex-col space-y-2 items-center">
+      <img src="/svgs/boxes.svg" alt="Solution icon" class="w-6 md:w-8 h-6 md:h-8" />
+      <span class="text-slate-200 text-center">
+        {t('home.benefits-tailored')}
+      </span>
+    </li>
+    <li class="flex flex-col space-y-2 items-center">
+      <img src="/svgs/euro.svg" alt="Euro icon" class="w-6 md:w-8 h-6 md:h-8" />
+      <span class="text-slate-200 text-center">
+        {t('home.benefits-rate')}
+      </span>
+    </li>
+    <li class="flex flex-col space-y-2 items-center">
+      <img src="/svgs/star.svg" alt="Star icon" class="w-6 md:w-8 h-6 md:h-8" />
+      <span class="text-slate-200 text-center">
+        {t('home.benefits-quality')}
+      </span>
+    </li>
+    <li class="flex flex-col space-y-2 items-center">
+      <img src="/svgs/shield.svg" alt="Shield icon" class="w-6 md:w-8 h-6 md:h-8" />
+      <span class="text-slate-200 text-center">
+        {t('home.benefits-guarantee')}
+      </span>
+    </li>
+    <li class="flex flex-col space-y-2 items-center">
+      <img src="/svgs/handshake.svg" alt="Handshake icon" class="w-6 md:w-8 h-6 md:h-8" />
+      <span class="text-slate-200 text-center">
+        {t('home.benefits-partnership')}
+      </span>
+    </li>
+  </ul>
+</section>

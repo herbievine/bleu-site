@@ -1,0 +1,37 @@
+---
+type Props = {
+  title: string;
+  description: string;
+  price: string;
+  list: {
+    description: string;
+    items: string[];
+  };
+  cta: string;
+};
+---
+
+<div class="flex flex-col space-y-6">
+  <span class="text-xl font-semibold">{Astro.props.title}</span>
+  <span class="font-medium underline">{Astro.props.price}</span>
+  <span>{Astro.props.description}</span>
+  <div class="flex flex-col space-y-2">
+    <span class="font-medium">{Astro.props.list.description}</span>
+    <ul class="flex flex-col space-y-1">
+      {
+        Astro.props.list.items.map((item) => (
+          <li class="flex items-center space-x-2">
+            <img src="/svgs/check.svg" alt="Check icon" class="w-5 h-5" />
+            <span>{item}</span>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+  <a
+    href="https://cal.com/herbievine/30min"
+    class="w-fit px-4 py-2 bg-slate-800 hover:bg-slate-900 transition-colors duration-200 text-white font-semibold"
+  >
+    {Astro.props.cta}
+  </a>
+</div>

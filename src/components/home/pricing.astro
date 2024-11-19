@@ -1,0 +1,97 @@
+---
+import PricingCard from './pricing-card.astro';
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<section class="w-full max-w-7xl mx-auto px-6 py-40 md:py-60 flex flex-col items-center space-y-6">
+  <h2 id="pricing" class="font-bold text-3xl md:text-5xl text-center scroll-mt-40">
+    <a href="#pricing">{t('pricing.title')}</a>
+  </h2>
+  <p class="text-slate-600 text-center font-medium max-w-lg md:max-w-xl">
+    {t('pricing.subtitle')}
+  </p>
+  <div class="py-12 w-full grid grid-cols-1 lg:grid-cols-3 gap-20">
+    <!-- <PricingCard
+      title={t('pricing.oneoff.title')}
+      price={t('pricing.oneoff.price')}
+      description={t('pricing.oneoff.description')}
+      list={{
+        description: t('pricing.oneoff.coverage'),
+        items: [
+          t('pricing.oneoff.coverage-1'),
+          t('pricing.oneoff.coverage-2'),
+          t('pricing.oneoff.coverage-3'),
+          t('pricing.oneoff.coverage-4'),
+          t('pricing.oneoff.coverage-5'),
+          t('pricing.oneoff.coverage-6')
+        ]
+      }}
+      cta={t('pricing.cta.book')}
+    /> -->
+    <PricingCard
+      title={t('pricing.mvp.title')}
+      price={t('pricing.mvp.price')}
+      description={t('pricing.mvp.description')}
+      list={{
+        description: t('pricing.mvp.included'),
+        items: [
+          t('pricing.mvp.included-1'),
+          t('pricing.mvp.included-2'),
+          t('pricing.mvp.included-3'),
+          t('pricing.mvp.included-4'),
+          t('pricing.mvp.included-5'),
+          t('pricing.mvp.included-6')
+        ]
+      }}
+      cta={t('pricing.cta.book')}
+    />
+    <PricingCard
+      title={t('pricing.collab.title')}
+      price={t('pricing.collab.price')}
+      description={t('pricing.collab.description')}
+      list={{
+        description: t('pricing.collab.included'),
+        items: [
+          t('pricing.collab.included-1'),
+          t('pricing.collab.included-2'),
+          t('pricing.collab.included-3'),
+          t('pricing.collab.included-4'),
+          t('pricing.collab.included-5'),
+          t('pricing.collab.included-6')
+        ]
+      }}
+      cta={t('pricing.cta.book')}
+    />
+    <PricingCard
+      title={t('pricing.partner.title')}
+      price={t('pricing.partner.price')}
+      description={t('pricing.partner.description')}
+      list={{
+        description: t('pricing.partner.included'),
+        items: [
+          t('pricing.partner.included-1'),
+          t('pricing.partner.included-2'),
+          t('pricing.partner.included-3'),
+          t('pricing.partner.included-4'),
+          t('pricing.partner.included-5'),
+          t('pricing.partner.included-6'),
+          t('pricing.partner.included-7'),
+          t('pricing.partner.included-8')
+        ]
+      }}
+      cta={t('pricing.cta.book')}
+    />
+  </div>
+  <p class="text-slate-600 text-center font-medium max-w-lg md:max-w-xl">
+    {t('pricing.cta.unsure')}
+    <a
+      href="https://cal.com/herbievine/30min"
+      class="text-slate-800 hover:text-slate-900 transition-colors duration-200 font-semibold underline"
+      >{t('pricing.cta.reach')}</a
+    >
+    {t('pricing.cta.findout')}
+  </p>
+</section>
