@@ -2,12 +2,9 @@
 import Base from '../../layouts/base.astro';
 import Header from '../../components/header.astro';
 import Footer from '../../components/footer.astro';
-import Pricing from '../../components/home/pricing.astro';
+import Hero from '../../components/home/hero.astro';
 import Benefits from '../../components/home/benefits.astro';
-import { getLangFromUrl, useTranslations } from '../../i18n/utils';
-
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
+import Pricing from '../../components/home/pricing.astro';
 ---
 
 <Base
@@ -17,14 +14,7 @@ const t = useTranslations(lang);
 >
   <Header />
   <div class="py-6 flex flex-col items-start">
-    <section class="w-full px-6 py-40 md:py-60 flex flex-col items-center space-y-6">
-      <h1 class="font-bold text-3xl md:text-5xl max-w-2xl text-center">
-        {t('home.title')}
-      </h1>
-      <p class="text-slate-600 text-center font-medium max-w-md">
-        {t('home.subtitle')}
-      </p>
-    </section>
+    <Hero />
     <Benefits />
     <Pricing />
   </div>
