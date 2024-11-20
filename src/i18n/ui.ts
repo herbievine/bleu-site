@@ -13,7 +13,7 @@ export const ui = {
 
     'home.title': 'The web agency for modern brands',
     'home.subtitle': 'We specialize in crafting sleek, scalable frontend solutions using React.',
-    'home.slots': 'slots available',
+    'home.available': 'Available now',
 
     'home.benefits-title': 'What we offer',
     'home.benefits-subtitle':
@@ -93,7 +93,7 @@ export const ui = {
     'home.title': "L'agence web pour les marques modernes",
     'home.subtitle':
       'Nous sommes spécialisés dans la création de solutions frontend élégantes et évolutives avec React.',
-    'home.slots': 'places restantes',
+    'home.available': 'Disponible',
 
     'home.benefits-title': 'Ce que nous offrons',
     'home.benefits-subtitle':
