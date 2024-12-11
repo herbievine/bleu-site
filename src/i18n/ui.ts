@@ -56,7 +56,7 @@ export const ui = {
 
     // Collaboration
     'pricing.collab.title': 'Collaboration',
-    'pricing.collab.price': '€2,400/month',
+    'pricing.collab.price': '€999/month',
     'pricing.collab.description': 'Full-stack solutions, tailored to your unique requirements.',
     'pricing.collab.included': "What's included?",
     'pricing.collab.included-1': '8 to 10 day turnaround',
@@ -137,7 +137,7 @@ export const ui = {
 
     // Collaboration
     'pricing.collab.title': 'Collaboration',
-    'pricing.collab.price': '2 400 €/mois',
+    'pricing.collab.price': '999 €/mois',
     'pricing.collab.description': 'Solutions complètes, adaptées à vos besoins uniques.',
     'pricing.collab.included': 'Ce qui est inclus ?',
     'pricing.collab.included-1': 'Délai de 8 à 10 jours',
